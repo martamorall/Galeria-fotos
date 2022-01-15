@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="imagenes/Logo.png">
+    <title>Galería</title>
+</head>
+
+<body>
+    <h1>Galería de fotos</h1>
+    <nav>
+        <input type="button" onclick="capturarFoto()" value="Captura Foto" />
+        <input type="file" id="files" />
+        <input type="button" id="bgrabar" value="Grabar">
+        <input type="button" id="bvisualizar" value="Visualizar">
+        Dato a Buscar <input type="text" id="cdatoabuscar" />
+        <select id="campos">
+            <option value=""> Selecciona el campo de búsqueda</option>
+            <option value="id">Id</option>
+            <option value="by_nombre">Nombre</option>
+            <option value="by_tema">Tema</option>
+        
+        </select>
+    </nav>
+    <br>
+
+    <section id="principal">
+        <article>
+            <video id="Video1" controls style="border: 1px solid blue;" height="540" width="620" title="Video Base">
+                <canvas id="foto"></canvas></video>
+        </article>
+        <article>
+            <img id="imagenCapturada" style="width:400px;height:300px" src="./imagenes/Logo.png" />
+        </article>
+        <article>
+            <table>
+                <tr>
+                    <td>Id:</td> 
+                    <td><input type="text" id="cId"></td>
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" id="cNombre"></td>
+                </tr>
+                <tr>
+                    <td>Tema:</td>
+                    <td><input type="text" id="cTema"></td>
+                </tr>
+            </table>
+            
+        </article>
+    </section>
+
+    <section id="seccion_galeria">
+        <h2>Mi galería</h2>
+        <div id="galeria" style="width:100%; height:100%;"></div>
+    </section>
+<footer>
+    <p>Marta Moral - DWEC - 2021/2022</p>
+</footer>
+    <script src="./js/funciones.js"></script>
+    <script src="./js/bd.js"></script>
+
+</body>
+
+</html>
